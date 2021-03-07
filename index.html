@@ -3,79 +3,253 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <!-- <link rel="stylesheet" href="https://fonts.google.com/specimen/Bai+Jamjuree"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Clipboard landing page</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
+    @import url(https://fonts.google.com/specimen/Bai+Jamjuree:400,600);
+
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+    html {
+      background-image: url('images/bg-header-desktop.png');
+      background-repeat: no-repeat;
+      background-size: 100%;
+      color: hsl(210, 10%, 33%);
+    }
+    body {
+      font-family: 'Bai Jamjuree';
+      font-size: 18px;
+      line-height: 25px;
+    }
+    /* #content{
+      text-align: center;
+    } */
+    #header {
+      text-align: center;
+      margin-bottom: 0px;
+    }
+    #header img {
+      margin: 30px;
+    }
+    .section{
+      text-align: center;
+      margin: 130px auto;
+    }
+    .section p{
+      margin: 0 auto;
+      width: 690px;
+    }
+    .download-buttons {
+      padding-top: 30px;
+      margin-bottom: 150px
+    }
+    .download-buttons a{
+      display: inline-block;
+      padding: 12px;
+      margin: 0 5px;
+      width: 180px;
+      border-radius: 25px;
+      color: white;
+    }
+    .ios {
+      background-color: hsl(171, 66%, 44%);
+      border-width: 0px 0px 4px 0px;
+      border-style: solid;
+      border-color: hsl(171, 46%, 44%);
+    }
+    .mac {
+      background-color: hsl(233, 100%, 69%);
+      border-width: 0px 0px 4px 0px;
+      border-style: solid;
+      border-color: hsl(233, 59%, 57%);
+    }
+    h2 {
+      text-align: center;
+    }
+    #computer {
+      float:left;
+      margin-left: -80px;
+    }
+    #organize-info {
+      margin-top: 0px;
+    }
+    #params {
+      float: left;
+    }
+    #params li {
+      padding: 15px 0;
+      padding-left: 50px;;
+      list-style-type: none;
+    }
+    #params p {
+      margin-top: -8px;
+    }
+    #access {
+      clear: both;
+      text-align: center;
+    }
+    #partners li{
+      display: inline-block;
+      list-style-type: none;
+      margin: 80px;
+    }
+    #partners {
+      text-align: center;
+    }
+    #clipboard {
+      clear: both;
+      text-align: center;
+    }
+    #addons {
+      list-style-type: none;
+      text-align:center;
+    }
+    #addons li {
+      display: inline-block;
+      width: 25%;
+      margin: 0 15;
+    }
+    #superchange {
+      text-align: center;
+      margin: 50px 0;
+    }
+    #footer {
+      height: 150px;
+      background-color: hsl(0, 0%, 95%);
+      padding-left:350px;
+    }
+    #footer-logo {
+      height: 50px;
+    }
+    #footer-logo img {
+      width: 3%;
+      float: left;
+      margin-top: 55px;
+      margin-left: 80px;
+      margin-right: 80px;
+    }
+    #footer ul{
+      width: 30%;
+      column-count: 3;
+      clear:right;
+      list-style-type: none;
+      display: inline-block;
+    }
+    #footer a:link{
+      text-decoration: none;
+      color: inherit;
+    }
+    p {
+      color: hsl(201, 11%, 66%);
+    }
+    #icons {
+      float:right;
+      width: 20%;
+    }
+    #access img {
+      margin-top: 90px;
+    }
   </style>
 </head>
 <body>
 
-  <div id="header">
+  <div id="header" class="section">
+    <img src="images/logo.svg">
     <h1>A history of everything you copy</h1> 
 
     <p>Clipboard allows you to track and organize everything you 
     copy. Instantly access your clipboard on all your devices.</p>
-
-    <button type="button">Download for iOS</button>
-    <button type="button">Download for Mac</button>
+    <div class="download-buttons">
+      <a class="ios" type="button">Download for iOS</a>
+      <a class="mac" type="button">Download for Mac</a>
+    </div>
   </div>
   <div id="content">
-    <h2>Keep track of your snippets</h2>
+    <div id="organize-info" class="section">
+      <h2>Keep track of your snippets</h2>
+      <p>Clipboard instantly stores any item you copy in the cloud, 
+      meaning you can access your snippets immediately on all your 
+      devices. Our Mac and iOS apps will help you organize everything.</p>
+    </div>
+  <div id="params-info">
+    <img id="computer" src="images/image-computer.png">
+      <ul id="params">
+        <li><h3>Quick Search</h3>
+          <p>Easily search your snippets by content,<br> category, web address, application, and more.</p>
+        </li>
+        <li><h3>iCloud Sync</h3>
+          <p>Instantly saves and syncs snippets across all<br> your devices.</p>
+        </li>
+        <li><h3>Complete History</h3>
+          <p>Retrieve any snippets from the first moment <br>you started using the app.</p>
+        </li>
+      </ul>
+  </div>
+    <div id="access" class="section">
+      <h2>Access Clipboard anywhere</h2>
+      <p>Whether you’re on the go, or at your computer, you can access all your Clipboard 
+      snippets in a few simple clicks.</p>
+      <img src="images/image-devices.png">
+    </div>
+      <div class="section">
+        <h2>Supercharge your workflow</h2>
+        <p>We’ve got the tools to boost your productivity.</p>
+      </div>
+      <div id="superchange">
+      <ul id="addons">
+        <li><img src="images/icon-blacklist.svg">
+          <h3>Create blacklists</h3>
+          <p>Ensure sensitive information never makes its<br> way to your clipboard by excluding certain<br> sources.</p>
+        </li>
+        <li><img src="images/icon-text.svg">
+          <h3>Plain text snippets</h3>
+          <p>Remove unwanted formatting from copied text<br> for a consistent look.<br><br></p>
+        </li>
+        <li><img src="images/icon-preview.svg">
+          <h3>Sneak preview</h3>
+          <p>Quick preview of all snippets on your Clipboard<br> for easy access.<br><br></p>
+        </li>
+      </ul>
+    </div>
 
-    <p>Clipboard instantly stores any item you copy in the cloud, 
-    meaning you can access your snippets immediately on all your 
-    devices. Our Mac and iOS apps will help you organize everything.</p>
-
-    <ul>
-      <li><h3>Quick Search</h3>
-        <p>Easily search your snippets by content, category, web address, application, and more.</p>
-      </li>
-      <li><h3>iCloud Sync</h3>
-        <p>Instantly saves and syncs snippets across all your devices.</p>
-      </li>
-      <li><h3>Complete History</h3>
-        <p>Retrieve any snippets from the first moment you started using the app.</p>
-      </li>
-    </ul>
-
-    <h2>Access Clipboard anywhere</h2>
-    <p>Whether you’re on the go, or at your computer, you can access all your Clipboard 
-    snippets in a few simple clicks.</p>
-
-    <h2>Supercharge your workflow</h2>
-    <p>We’ve got the tools to boost your productivity.</p>
-
-    <ul>
-      <li><h3>Create blacklists</h3>
-        <p>Ensure sensitive information never makes its way to your clipboard by excluding certain sources.</p>
-      </li>
-      <li><h3>Plain text snippets</h3>
-        <p>Remove unwanted formatting from copied text for a consistent look.</p>
-      </li>
-      <li><h3>Sneak preview</h3>
-        <p>Quick preview of all snippets on your Clipboard for easy access.</p>
-      </li>
-    </ul>
-
+   <ul id="partners">
+      <li><img src="images/logo-google.png"></li>
+      <li><img src="images/logo-ibm.png"></li>
+      <li><img src="images/logo-microsoft.png"></li>
+      <li><img src="images/logo-hp.png"></li>
+      <li><img src="images/logo-vector-graphics.png"></li>
+   </ul>
+   <div id="clipboard">
     <h2>Clipboard for iOS and Mac OS</h2>
     <p>Available for free on the App Store. Download for Mac or iOS, sync with iCloud 
     and you’re ready to start adding to your clipboard.</p>
-
-    <button type="button">Download for iOS</button>
-    <button type="button">Download for Mac</button>
+    <div class="download-buttons">
+      <a class="ios" type="button">Download for iOS</a>
+      <a class="mac" type="button">Download for Mac</a>
+    </div>
+  </div> 
   </div>
   <div id="footer">
-    <a href="#">FAQs</a>
-    <a href="#">Contact Us</a>
-    <a href="#">Privacy Policy</a>
-    <a href="#">Press Kit</a>
-    <a href="#">Install Guide</a>
+    <div id="footer-logo">
+      <img src="images/logo.svg">
+    </div>
+    <ul>
+      <li><a href="#">FAQs</a></li>
+      <li><a href="#">Contact Us</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Press Kit</a></li>
+      <li><a href="#">Install Guide</a></li>
+    </ul>
+    <div id="icons">
+      <img src="images/icon-facebook.svg">
+      <img src="images/icon-twitter.svg">
+      <img src="images/icon-instagram.svg">
+    </div>
   </div>
   <footer>
     <p class="attribution">
